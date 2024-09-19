@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${karla.className} grid min-h-screen grid-cols-1 content-between scroll-smooth antialiased`}
+        className={`${karla.className} grid min-h-screen grid-cols-1 content-start scroll-smooth antialiased`}
       >
         <Header />
         {children}

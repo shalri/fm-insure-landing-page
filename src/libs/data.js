@@ -20,7 +20,7 @@ export const navLinks = [
 export const hero = {
   heading: "Humanizing your insurance.",
   copy: "Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan that’s right for you. Ensure you and your loved ones are protected.",
-  calltoaction: "View plans",
+  callToAction: "View plans",
 };
 
 export const features = [
