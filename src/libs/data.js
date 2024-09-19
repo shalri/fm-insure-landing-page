@@ -53,22 +53,22 @@ export const socialLinks = [
   {
     label: "Facebook",
     href: "#",
-    icon: "/images/icon-facebook.svg",
+    icon: "FaFacebookSquare",
   },
   {
     label: "Twitter",
     href: "#",
-    icon: "/images/icon-twitter.svg",
+    icon: "FaTwitterSquare",
   },
   {
     label: "Pinterest",
     href: "#",
-    icon: "/images/icon-pinterest.svg",
+    icon: "FaPinterestSquare",
   },
   {
     label: "Instagram",
     href: "#",
-    icon: "/images/icon-instagram.svg",
+    icon: "FaInstagramSquare",
   },
 ];
 

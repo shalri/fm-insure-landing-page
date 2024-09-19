@@ -4,7 +4,8 @@ export function useMobileNav(
   navRef: RefObject<HTMLDivElement>,
   isSmallScreen: boolean,
 ) {
-  const [isMobileNavActive, setIsMobileNavActive] = useState(false); // code the design state
+  // TODO: change state after coding layout
+  const [isMobileNavActive, setIsMobileNavActive] = useState(true);
 
   const closeMobileNav = useCallback(() => {
     if (isSmallScreen) {
