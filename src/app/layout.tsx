@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Karla } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const karla = Karla({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
-  title: "きそ(kiso) | FScode",
-  description: "A basic NextJS template for Frontend Mentor Challenges",
+  title: "Insure Landing Page | FScode",
+  description:
+    "Solution for Insure Landing Page challenge from Frontend Mentor",
 };
 
 export default function RootLayout({
@@ -17,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} flex min-h-screen flex-col antialiased scroll-smooth`}
+        className={`${karla.className} flex min-h-screen flex-col scroll-smooth antialiased`}
       >
         {children}
       </body>

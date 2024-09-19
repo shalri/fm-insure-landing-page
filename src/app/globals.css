@@ -1,10 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  /* Primary */
+  --dark-violet: hsl(256, 26%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+
+  /* Neutral */
+  --very-dark-violet: hsl(270, 9%, 17%);
+  --dark-grayish-violet: hsl(273, 4%, 51%);
+  --very-light-gray: hsl(0, 0%, 98%);
+
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Fonts */
+  --heading: "DM Serif Display", serif;
+  --copy: "Karla", sans-serif;
+
+  /* Font Weights */
+  --bold: 700;
+  --normal: 400;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,7 +36,18 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--copy);
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
 }
 
 @layer utilities {

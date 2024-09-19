@@ -9,8 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        "ip-dark-violet": "var(--dark-violet)",
+        "ip-grayish-blue": "var(--grayish-blue)",
+        "ip-very-dark-violet": "var(--very-dark-violet)",
+        "ip-dark-grayish-violet": "var(--dark-grayish-violet)",
+        "ip-very-light-gray": "var(--very-light-gray)",
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        heading: "var(--heading)",
+        copy: "var(--copy)",
+      },
+      fontWeight: {
+        bold: "var(--bold)",
+        normal: "var(--normal)",
       },
     },
   },
