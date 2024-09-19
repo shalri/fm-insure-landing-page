@@ -44,6 +44,11 @@ export const features = [
   },
 ];
 
+export const cta = {
+  copy: "Find out more about how we work",
+  buttonCopy: "How we work",
+};
+
 export const socialLinks = [
   {
     label: "Facebook",

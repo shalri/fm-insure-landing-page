@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Karla } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const karla = Karla({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -18,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${karla.className} flex min-h-screen flex-col scroll-smooth antialiased`}
+        className={`${karla.className} grid min-h-screen grid-cols-1 content-between scroll-smooth antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
