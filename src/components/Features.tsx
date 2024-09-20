@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Features() {
   return (
-    <article className="pb-[9rem] sm:mx-auto sm:max-w-[1154px]">
+    <article className="pb-[9rem] sm:mx-auto sm:max-w-[1154px] sm:pb-[9.8rem]">
       <hr className="mx-auto mb-10 mt-[8.75rem] h-[1px] w-[9rem] bg-ip-dark-violet sm:mb-14 sm:ml-6 sm:mt-[19rem] sm:h-[2px]" />
       <h2 className="px-4 text-center text-[3rem] leading-[1.02] -tracking-[0.6] sm:px-6 sm:text-left sm:text-[4.6rem] sm:-tracking-[0.027em]">
         We&rsquo;re different
