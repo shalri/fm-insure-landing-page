@@ -75,34 +75,37 @@ export default function Header() {
   };
 
   return (
-    <header className="z-20 flex w-full items-center justify-between px-6 py-5 sm:mx-auto sm:max-w-[1154px]">
-      <div className="relative h-10 w-[7rem]">
-        <Link href="/">
-          <Image
-            src="/images/logo.svg"
-            fill
-            alt="logo"
-            className="object-contain"
-          />
-        </Link>
+    //{/* <header className="z-50 flex w-full items-center justify-between bg-ip-very-light-gray px-6 py-5 sm:mx-auto sm:max-w-[1154px]"> */}
+    <header className="z-50 bg-ip-very-light-gray">
+      <div className="flex w-full items-center justify-between bg-ip-very-light-gray px-6 py-5 sm:mx-auto sm:max-w-[1154px]">
+        <div className="relative h-10 w-[7rem]">
+          <Link href="/">
+            <Image
+              src="/images/logo.svg"
+              fill
+              alt="logo"
+              className="object-contain"
+            />
+          </Link>
+        </div>
+        <nav className="relative" ref={navRef}>
+          {isSmallScreen ? (
+            mobileNavAnimationWrapper(
+              <NavContent handleLinkClink={handleLinkClink} />,
+            )
+          ) : (
+            <NavContent handleLinkClink={handleLinkClink} />
+          )}
+        </nav>
+        <button
+          aria-label={isMobileNavActive ? "Close Menu" : "Open Menu"}
+          className={cn(
+            "size-8 bg-[url('/images/icon-hamburger.svg')] bg-contain bg-no-repeat sm:hidden",
+            !isMobileNavActive && "bg-[url('/images/icon-close.svg')]",
+          )}
+          onClick={toggleMobileNav}
+        ></button>
       </div>
-      <nav className="relative" ref={navRef}>
-        {isSmallScreen ? (
-          mobileNavAnimationWrapper(
-            <NavContent handleLinkClink={handleLinkClink} />,
-          )
-        ) : (
-          <NavContent handleLinkClink={handleLinkClink} />
-        )}
-      </nav>
-      <button
-        aria-label={isMobileNavActive ? "Close Menu" : "Open Menu"}
-        className={cn(
-          "size-8 bg-[url('/images/icon-hamburger.svg')] bg-contain bg-no-repeat sm:hidden",
-          !isMobileNavActive && "bg-[url('/images/icon-close.svg')]",
-        )}
-        onClick={toggleMobileNav}
-      ></button>
     </header>
   );
 }

@@ -10,7 +10,7 @@ export default function Button({
   return (
     <button
       className={cn(
-        "border-2 border-ip-very-light-gray px-[1.6rem] py-2 text-sm uppercase tracking-widest",
+        "border-2 border-ip-very-light-gray px-[1.6rem] py-2 text-sm uppercase tracking-widest transition-colors duration-300 hover:bg-ip-very-light-gray hover:text-ip-dark-violet",
         className,
       )}
     >
