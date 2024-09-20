@@ -15,17 +15,21 @@ const NavContent = React.memo(function NavContent({
   handleLinkClink: (e: React.MouseEvent) => void;
 }) {
   return (
-    <ul className="flex flex-col items-center justify-center gap-y-[2.20rem]">
+    <ul className="flex flex-col items-center justify-center gap-y-[2.20rem] sm:mt-[2px] sm:w-full sm:flex-row sm:gap-x-[1.65rem] sm:gap-y-0 sm:text-[0.86rem] sm:tracking-widest">
       {navLinks.map((link) => (
         <li
           className={cn(
-            "uppercase",
+            "w-auto uppercase text-ip-dark-grayish-violet transition-colors duration-300 hover:text-ip-very-dark-violet",
             link.label === "View plans" &&
-              "-mt-2 w-full border-2 border-ip-very-light-gray py-3 text-center hover:bg-ip-dark-violet",
+              "-mt-2 w-full border-2 border-ip-very-light-gray py-3 text-center hover:bg-ip-dark-violet hover:text-ip-very-light-gray sm:ml-1 sm:mt-0 sm:w-auto sm:border-ip-very-dark-violet sm:px-[1.65rem] sm:py-[0.46rem]",
           )}
           key={link.label}
         >
-          <Link href={link.href} onClick={handleLinkClink}>
+          <Link
+            href={link.href}
+            onClick={handleLinkClink}
+            className="sm:inline-block"
+          >
             {link.label}
           </Link>
         </li>
@@ -71,7 +75,7 @@ export default function Header() {
   };
 
   return (
-    <header className="z-20 flex w-full items-center justify-between px-6 py-5">
+    <header className="z-20 flex w-full items-center justify-between px-6 py-5 sm:mx-auto sm:max-w-[1154px]">
       <div className="relative h-10 w-[7rem]">
         <Link href="/">
           <Image
@@ -92,9 +96,9 @@ export default function Header() {
         )}
       </nav>
       <button
-        aria-label="Open Menu"
+        aria-label={isMobileNavActive ? "Close Menu" : "Open Menu"}
         className={cn(
-          "size-8 bg-[url('/images/icon-hamburger.svg')] bg-contain bg-no-repeat",
+          "size-8 bg-[url('/images/icon-hamburger.svg')] bg-contain bg-no-repeat sm:hidden",
           !isMobileNavActive && "bg-[url('/images/icon-close.svg')]",
         )}
         onClick={toggleMobileNav}
