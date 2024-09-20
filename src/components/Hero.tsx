@@ -13,10 +13,7 @@ export default function Hero() {
           <h1 className="text-[2.90rem] leading-[1.02]">{hero.heading}</h1>
           <p className="mt-4 px-4 leading-relaxed">{hero.copy}</p>
 
-          <Button
-            label={hero.callToAction}
-            className="mt-8 py-2 text-sm uppercase tracking-widest"
-          />
+          <Button label={hero.callToAction} className="mt-8" />
         </div>
       </div>
     </section>
