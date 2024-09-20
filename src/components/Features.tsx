@@ -25,7 +25,9 @@ export default function Features() {
             <h3 className="mt-8 text-center text-[1.68rem]">
               {feature.heading}
             </h3>
-            <p className="mt-4 px-2 text-center">{feature.description}</p>
+            <p className="mt-4 px-2 text-center text-ip-dark-grayish-violet">
+              {feature.description}
+            </p>
           </section>
         ))}
       </div>
