@@ -78,7 +78,7 @@ export const footerLinks = [
     links: [
       { label: "How we work", href: "/" },
       { label: "Why Insure?", href: "#" },
-      { label: "View plans", href: "#" },
+      { label: "Check price", href: "#" },
       { label: "Reviews", href: "#" },
     ],
   },
