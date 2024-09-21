@@ -39,7 +39,7 @@ export default function Footer() {
 
               return (
                 <li key={link.label}>
-                  <a href={link.href} target="_blank" rel="noopener noreferrer">
+                  <a href={link.href} target="_blank">
                     {IconComponent && (
                       <IconComponent className="transition-color text-[1.9rem] text-ip-dark-grayish-violet duration-300 hover:text-ip-very-dark-violet sm:text-[1.70rem]" />
                     )}
