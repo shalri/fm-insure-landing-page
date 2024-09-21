@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="relative bg-ip-dark-violet pb-[5.8rem] pt-20 text-ip-very-light-gray sm:row-start-1 sm:bg-transparent sm:pt-0">
           {/* Background patterns mobile*/}
           <div className="absolute left-0 top-0 size-[170px] bg-[url(/images/bg-pattern-intro-left-mobile.svg)] bg-contain bg-no-repeat sm:hidden" />
-          <div className="absolute -bottom-[176px] right-0 size-[330px] bg-[url(/images/bg-pattern-intro-right-mobile.svg)] bg-contain bg-right bg-no-repeat sm:hidden" />
+          <div className="absolute -bottom-[176px] right-0 h-[330px] w-[100px] bg-[url(/images/bg-pattern-intro-right-mobile.svg)] bg-contain bg-right bg-no-repeat sm:hidden" />
 
           <hr className="mb-[4rem] hidden h-[2px] w-[9.3rem] bg-ip-very-light-gray sm:block" />
           <div className="mt-4 px-3 text-center sm:mt-0 sm:text-pretty sm:pl-0 sm:text-left">
@@ -24,7 +24,10 @@ export default function Hero() {
               {hero.copy}
             </p>
 
-            <Button label={hero.callToAction} className="mt-8 sm:mt-[1.9rem]" />
+            <Button
+              label={hero.callToAction}
+              className="z-50 mt-8 sm:mt-[1.9rem]"
+            />
           </div>
         </div>
       </div>
