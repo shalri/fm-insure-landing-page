@@ -8,7 +8,7 @@ export default function Features() {
       <h2 className="px-4 text-center text-[3rem] leading-[1.02] -tracking-[0.6] sm:px-6 sm:text-left sm:text-[4.6rem] sm:-tracking-[0.027em]">
         We&rsquo;re different
       </h2>
-      <div className="mt-20 flex flex-col gap-y-[3.7rem] px-6 sm:mt-[5.75rem] sm:grid sm:grid-cols-3 sm:gap-x-[1.875rem] sm:gap-y-0">
+      <div className="mt-20 flex flex-col gap-y-[3.7rem] px-6 sm:mt-[5.75rem] sm:grid sm:grid-cols-3 sm:items-start sm:gap-x-[1.875rem] sm:gap-y-0">
         {features.map((feature) => (
           <section
             className="flex flex-col items-center justify-center sm:items-start"
