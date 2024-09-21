@@ -17,7 +17,10 @@ export default function Hero() {
 
           <hr className="mb-[4rem] hidden h-[2px] w-[9.3rem] bg-ip-very-light-gray sm:block" />
           <div className="mt-4 px-3 text-center sm:mt-0 sm:text-pretty sm:pl-0 sm:text-left">
-            <h1 className="text-[2.90rem] leading-[1.02] sm:pr-4 sm:text-[4.35rem] sm:leading-[0.907]">
+            <h1
+              className="text-[2.90rem] leading-[1.02] sm:pr-4 sm:text-[4.35rem] sm:leading-[0.907]"
+              style={{ fontSize: "clamp(2.90rem, 4.83vw, 4.35rem)" }}
+            >
               {hero.heading}
             </h1>
             <p className="mt-4 px-4 leading-relaxed sm:mt-7 sm:px-0">
