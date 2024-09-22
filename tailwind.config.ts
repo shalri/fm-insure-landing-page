@@ -14,8 +14,6 @@ const config: Config = {
         "ip-very-dark-violet": "var(--very-dark-violet)",
         "ip-dark-grayish-violet": "var(--dark-grayish-violet)",
         "ip-very-light-gray": "var(--very-light-gray)",
-        background: "var(--background)",
-        foreground: "var(--foreground)",
       },
       fontFamily: {
         heading: "var(--heading)",

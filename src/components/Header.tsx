@@ -19,7 +19,7 @@ const NavContent = React.memo(function NavContent({
       {navLinks.map((link) => (
         <li
           className={cn(
-            "w-auto uppercase text-ip-dark-grayish-violet transition-colors duration-300 hover:text-ip-very-dark-violet",
+            "w-auto uppercase text-ip-dark-grayish-violet transition-colors duration-300 hover:text-white sm:hover:text-ip-very-dark-violet",
             link.label === "View plans" &&
               "-mt-2 w-full border-2 border-ip-very-light-gray py-3 text-center hover:bg-ip-dark-violet hover:text-ip-very-light-gray sm:ml-1 sm:mt-0 sm:w-auto sm:border-ip-very-dark-violet sm:px-[1.65rem] sm:py-[0.46rem]",
           )}
@@ -99,8 +99,8 @@ export default function Header() {
         <button
           aria-label={isMobileNavActive ? "Close Menu" : "Open Menu"}
           className={cn(
-            "size-8 bg-[url('/images/icon-hamburger.svg')] bg-contain bg-no-repeat sm:hidden",
-            !isMobileNavActive && "bg-[url('/images/icon-close.svg')]",
+            "size-8 bg-[url('/images/icon-close.svg')] bg-contain bg-no-repeat sm:hidden",
+            !isMobileNavActive && "bg-[url('/images/icon-hamburger.svg')]",
           )}
           onClick={toggleMobileNav}
         ></button>

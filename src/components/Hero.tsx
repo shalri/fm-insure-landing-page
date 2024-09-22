@@ -18,18 +18,18 @@ export default function Hero() {
           <hr className="mb-[4rem] hidden h-[2px] w-[9.3rem] bg-ip-very-light-gray sm:block" />
           <div className="mt-4 px-3 text-center sm:mt-0 sm:text-pretty sm:pl-0 sm:text-left">
             <h1
-              className="text-[2.90rem] leading-[1.02] sm:pr-4 sm:text-[4.35rem] sm:leading-[0.907]"
+              className="text-[2.90rem] leading-[1.02] text-ip-very-light-gray sm:pr-4 sm:text-[4.35rem] sm:leading-[0.907]"
               style={{ fontSize: "clamp(2.90rem, 4.83vw, 4.35rem)" }}
             >
               {hero.heading}
             </h1>
-            <p className="mt-4 px-4 leading-relaxed sm:mt-7 sm:px-0">
+            <p className="mt-4 px-4 leading-relaxed text-ip-very-light-gray sm:mt-7 sm:px-0">
               {hero.copy}
             </p>
 
             <Button
               label={hero.callToAction}
-              className="z-50 mt-8 sm:mt-[1.9rem]"
+              className="z-50 mt-8 text-ip-very-light-gray sm:mt-[1.9rem]"
             />
           </div>
         </div>
