@@ -21,7 +21,7 @@ const NavContent = React.memo(function NavContent({
           className={cn(
             "w-auto uppercase text-ip-dark-grayish-violet transition-colors duration-300 hover:text-white sm:hover:text-ip-very-dark-violet",
             link.label === "View plans" &&
-              "-mt-2 w-full border-2 border-ip-very-light-gray py-3 text-center hover:bg-ip-dark-violet hover:text-ip-very-light-gray sm:ml-1 sm:mt-0 sm:w-auto sm:border-ip-very-dark-violet sm:px-[1.65rem] sm:py-[0.46rem]",
+              "-mt-2 w-full border-2 border-ip-very-light-gray py-3 text-center hover:bg-ip-dark-violet hover:text-ip-very-light-gray sm:ml-1 sm:mt-0 sm:w-auto sm:border-ip-very-dark-violet sm:px-[1.65rem] sm:py-[0.46rem] sm:text-ip-very-dark-violet sm:hover:text-ip-very-light-gray",
           )}
           key={link.label}
         >
