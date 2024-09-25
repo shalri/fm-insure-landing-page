@@ -4,7 +4,7 @@ import Image from "next/image";
 import { navLinks } from "@/libs/data";
 import { cn } from "@/libs/utils";
 import { useMobileNav } from "@/hooks/useMobileNavigation";
-import { useCallback, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useSmallScreen } from "@/hooks/useSmallScreen";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
@@ -39,6 +39,7 @@ const NavContent = React.memo(function NavContent({
 });
 
 export default function Header() {
+  const [mounted, setMounted] = useState(false);
   const isSmallScreen = useSmallScreen();
   const navRef = useRef<HTMLDivElement>(null);
   const { isMobileNavActive, toggleMobileNav, closeMobileNav } = useMobileNav(
@@ -74,6 +75,10 @@ export default function Header() {
     }
   };
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <header className="z-50 bg-ip-very-light-gray">
       <div className="flex w-full items-center justify-between bg-ip-very-light-gray px-6 py-5 sm:mx-auto sm:max-w-[1154px]">
@@ -87,15 +92,17 @@ export default function Header() {
             />
           </Link>
         </div>
-        <nav className="relative" ref={navRef}>
-          {isSmallScreen ? (
-            mobileNavAnimationWrapper(
-              <NavContent handleLinkClink={handleLinkClink} />,
-            )
-          ) : (
-            <NavContent handleLinkClink={handleLinkClink} />
-          )}
-        </nav>
+        {mounted && (
+          <nav className="relative" ref={navRef}>
+            {isSmallScreen ? (
+              mobileNavAnimationWrapper(
+                <NavContent handleLinkClink={handleLinkClink} />,
+              )
+            ) : (
+              <NavContent handleLinkClink={handleLinkClink} />
+            )}
+          </nav>
+        )}
         <button
           aria-label={isMobileNavActive ? "Close Menu" : "Open Menu"}
           className={cn(
